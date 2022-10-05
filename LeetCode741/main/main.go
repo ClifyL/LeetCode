@@ -1,6 +1,9 @@
-package LeetCode741
+package main
+
+import "fmt"
 
 func main() {
+	fmt.Println("cherryPickup")
 }
 
 func cherryPickup(grid [][]int) int {

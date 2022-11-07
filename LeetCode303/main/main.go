@@ -2,11 +2,14 @@ package main
 
 import "fmt"
 
-//leetcode submit region begin(Prohibit modification and deletion)
 type NumArray struct {
 	sum []int
 }
 
+/*
+*
+[303]区域和检索- 数组不可变
+*/
 func main() {
 	input := []int{1, 2, 3, 1, 4}
 	obj := Constructor(input)

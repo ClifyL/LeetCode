@@ -9,6 +9,10 @@ func main() {
 	fmt.Println(findMedianSortedArrays([]int{1, 2, 3, 4}, []int{1, 2, 3, 4}))
 }
 
+/*
+*
+[4]寻找中位数
+*/
 func findMedianSortedArrays(nums1 []int, nums2 []int) float64 {
 	var (
 		pointOne = 0

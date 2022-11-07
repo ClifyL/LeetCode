@@ -4,37 +4,52 @@ import (
 	"fmt"
 )
 
+/*
+*
+[5]最大回文字串
+*/
 func main() {
 
-	fmt.Println(findMedianSortedArrays([]int{1, 2, 3, 4}, []int{1, 2, 3, 4}))
+	fmt.Println(longestPalindrome("bbbb"))
 }
 
-func findMedianSortedArrays(nums1 []int, nums2 []int) float64 {
+func longestPalindrome(s string) string {
 	var (
-		pointOne = 0
-		pointTwo = 0
+		start = 0
+		end   = 0
+		max   = 0
+		sp    = 0
+		ep    = 0
 	)
+	for i := 1; i < len(s); i++ {
+		sp = i - 1
+		if i < len(s)-1 && s[i-1] == s[i+1] {
+			sp = i - 1
+			ep = i + 1
+			for sp >= 0 && ep < len(s) && s[sp] == s[ep] {
+				if ep-sp+1 > max {
+					max = ep - sp + 1
+					start = sp
+					end = ep
+				}
+				ep++
+				sp--
+			}
+		}
+		if s[i-1] == s[i] {
+			sp = i - 1
+			ep = i
+			for sp >= 0 && ep < len(s) && s[sp] == s[ep] {
+				if ep-sp+1 > max {
+					max = ep - sp + 1
+					start = sp
+					end = ep
+				}
+				ep++
+				sp--
+			}
+		}
 
-	list := make([]int, len(nums1)+len(nums2))
-	for i := 0; i < len(nums1)+len(nums2); i++ {
-
-		if pointOne >= len(nums1) {
-			list[i] = nums2[pointTwo]
-			pointTwo++
-			continue
-		}
-		if pointTwo >= len(nums2) {
-			list[i] = nums1[pointOne]
-			pointOne++
-			continue
-		}
-		if nums1[pointOne] < nums2[pointTwo] {
-			list[i] = nums1[pointOne]
-			pointOne++
-		} else {
-			list[i] = nums2[pointTwo]
-			pointTwo++
-		}
 	}
-	return float64(list[int((len(nums1)+len(nums2)+1)/2)-1]+list[int((len(nums1)+len(nums2)+2)/2)-1]) / 2
+	return s[start : end+1]
 }

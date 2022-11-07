@@ -2,12 +2,15 @@ package main
 
 import "fmt"
 
-//leetcode submit region begin(Prohibit modification and deletion)
 type NumMatrix struct {
 	sum [][]int
 	m   int
 	n   int
 }
+
+/**
+[304]二维区域和检索-矩阵不可变
+*/
 
 func Constructor(matrix [][]int) NumMatrix {
 	if len(matrix) == 0 || len(matrix[0]) == 0 {

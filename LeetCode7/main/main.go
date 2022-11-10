@@ -3,41 +3,27 @@ package main
 import (
 	"fmt"
 	"math"
-	"strconv"
 )
 
 /*
 *
-[6]整数反转
+[7]整数反转
 */
 func main() {
-	fmt.Println(reverse(-130))
+	fmt.Println(reverse(22221111131319))
 }
 
 func reverse(x int) int {
-	if x == 0 {
-		return 0
-	}
-	num := strconv.Itoa(x)
-	var str string
-	end := len(num) - 1
-	for {
-		if num[end] != 48 {
-			break
+	var temp int
+	var res int
+	for x != 0 {
+		temp = x % 10
+		x = x / 10
+		// 由于x为int类型，限制temp的最大值只能是2，所以可以不用判断temp
+		if res > math.MaxInt32/10 || res < math.MinInt32/10 {
+			return 0
 		}
-		end--
+		res = res*10 + temp
 	}
-	for i := end; i >= 0; i-- {
-		if num[i] != 45 {
-			str += string(num[i])
-		}
-	}
-	result, _ := strconv.Atoi(str)
-	if result > math.MaxInt32 || result < math.MinInt32 {
-		return 0
-	} else if num[0] == 45 {
-		return -result
-	} else {
-		return result
-	}
+	return res
 }

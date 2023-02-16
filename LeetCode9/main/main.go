@@ -10,7 +10,7 @@ import (
 [9]回文数
 */
 func main() {
-	fmt.Println(isPalindrome(123211))
+	fmt.Println(isPalindrome(1234321))
 }
 
 func isPalindrome(x int) bool {

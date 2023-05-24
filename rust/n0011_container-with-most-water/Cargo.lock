@@ -3,5 +3,5 @@
 version = 3
 
 [[package]]
-name = "rust"
+name = "n0011_container-with-most-water"
 version = "0.1.0"

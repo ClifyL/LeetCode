@@ -4,6 +4,7 @@
         "./rust/n0011_container-with-most-water/Cargo.toml",
         "./rust/n0300_longest-increasing-subsequence/Cargo.toml",
         "./rust/n0322_coin-change/Cargo.toml",
-        "./rust/n0354_russian-doll-envelopes/Cargo.toml"
+        "./rust/n0354_russian-doll-envelopes/Cargo.toml",
+        "./rust/n0931_minimum-falling-path-sum/Cargo.toml",
     ]
 }

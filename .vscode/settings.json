@@ -6,5 +6,6 @@
         "./rust/n0322_coin-change/Cargo.toml",
         "./rust/n0354_russian-doll-envelopes/Cargo.toml",
         "./rust/n0931_minimum-falling-path-sum/Cargo.toml",
+        "./rust/n0072_edit-distance/Cargo.toml",
     ]
 }

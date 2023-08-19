@@ -3,3 +3,4 @@ target
 launch.json
 .Ds_Store
 Cargo.lock
+.vscode

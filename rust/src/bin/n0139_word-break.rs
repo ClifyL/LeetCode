@@ -6,7 +6,7 @@ pub fn word_break(s: String, word_dict: Vec<String>) -> bool {
             if word.len() > i {
                 continue;
             }
-            if dp[i - word.len()] && s[i - word.len()..i] == *word {
+            if dp[i - word.len()] && &s[i - word.len()..i] == word {
                 dp[i] = true;
                 break;
             }

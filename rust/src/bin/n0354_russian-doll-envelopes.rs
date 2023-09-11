@@ -16,7 +16,7 @@ pub fn max_envelopes(envelopes: Vec<Vec<i32>>) -> i32 {
 
 
 fn main() {
-    //let count = max_envelopes(vec![vec![5, 4], vec![6, 4], vec![6, 7], vec![2, 3]]);
-    let count = max_envelopes(vec![vec![1, 1]]);
+    let count = max_envelopes(vec![vec![5, 4], vec![6, 4], vec![6, 7], vec![2, 3]]);
+    // let count = max_envelopes(vec![vec![1, 1]]);
     println!("{count}");
 }

@@ -16,9 +16,6 @@ j->n b
 */
 pub fn longest_palindrome_subseq_2d(s: String) -> i32 {
     let n = s.len();
-    if n == 1 {
-        
-    }
     let mut dp = vec![vec![0; n]; n];
     let t: Vec<char> = s.chars().collect();
     for i in (0..n-1).rev() {
